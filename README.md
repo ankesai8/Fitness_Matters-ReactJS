@@ -1,3 +1,7 @@
+Link to youtube tutorial : https://www.youtube.com/watch?v=7CqJlxBYj-M&ab_channel=freeCodeCamp.org
+
+we do npm install axios to connect frontend from backend. This helps in sending the http request to the server.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

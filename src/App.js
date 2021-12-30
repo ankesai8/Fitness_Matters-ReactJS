@@ -1,25 +1,57 @@
-import logo from './logo.svg';
 import './App.css';
+import Navbar from './components/Navbar';
+import New_User from './components/New_User';
+import New_Exercise from './components/New_Exercise';
+import HomePage from './components/HomePage';
+import About from './components/About';
+import Footer from './components/Footer';
+
+
+
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Router>
+        <Navbar />
+
+        
+
+        <Switch>
+
+          <Route exact path="/">
+            <HomePage/>
+          </Route>
+
+          <Route exact path="/existing_user">
+            <New_Exercise />
+          </Route>
+
+          <Route exact path="/new_user">
+            <New_User />
+          </Route>
+
+          <Route exact path="/about">
+            <About />
+          </Route>
+
+        </Switch>
+
+        <Footer/>
+
+      </Router>
+    </>
   );
 }
 
 export default App;
+
+
+// TO-DO
+// add something so that usernames and passwords are being checked and displayed.
