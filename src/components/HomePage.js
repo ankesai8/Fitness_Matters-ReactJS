@@ -7,35 +7,80 @@ import { useState } from "react";
 
 export default function HomePage() {
 
-    // function renderTableData() {
+    const [list, setlist] = useState([]);
 
-    //     let data = [];
-    //     let html = "";
-    //     axios.get('http://localhost:1000/all_exercises').then((response) => {
+    function fetchlist() {
 
-    //         data = response.data;
-    //         console.log(response.data);
-    //         // console.log( typeof(response.data) ) ; 
+        renderTableData();
 
-    //         for (let i = 0; i < data.length; i++) {
-    //             html += `<tr>
-    //             <th scope="row">${i + 1}</th>
-    //             <td>${data[i].username}</td>
-    //             <td>${data[i].description}</td>
-    //             <td>${data[i].duration}</td>
-    //             </tr>`
-    //         }
+        return list.map((elem) => {
+            return (
+                // <option key={username} value={username}>{username}</option>
+                <>
+                    {console.log('inside JSX', elem)}
+                    <tr>
+                        <th scope="row">{elem.no}</th>
+                        <td>{elem.username}</td>
+                        <td>{elem.description}</td>
+                        <td>{elem.duration}</td>
+                    </tr>
+                </>
+            );
+        })
+    }
 
-    //         console.log("html=")
-    //         console.log(html);
-    //         html = "<tbody>" + html + "<tbody/>";
+    function renderTableData() {
+
+        axios.get('http://localhost:1000/all_exercises').then((response) => {
+
+            let temp = []
+            let obj = {
+                no: 0,
+                username: "",
+                description: "",
+                duration: 0,
+            };
 
 
-    //     }).catch((err) => {
-    //         console.log("GET request error");
-    //     })
-    //     return html;
-    // }
+            let data = response.data;
+            console.log('Response data is here:', response.data);
+            console.log('aapke data ka size: ', data.length);
+
+            // for (let i = 0; i < data.length; i++) {
+            //     obj.no = i;
+            //     obj.username = data[i].username;
+            //     obj.description = data[i].description;
+            //     obj.duration = data[i].duration;
+
+            //     temp.push(obj);
+            //     // console.log('oBJECT', obj)
+            //     console.log('temp is  ', temp)
+            // }
+            let i = 1;
+            data.forEach(element => {
+                obj = {
+                    no: i++ ,
+                    username: element.username,
+                    description: element.description,
+                    duration: element.duration
+                }
+
+                temp.push(obj);
+                // console.log('oBJECT', obj)
+                // console.log('temp is  ', temp)
+            });
+
+            if (list.length != temp.length) {
+                setlist(temp);
+            }
+
+            console.log('aapki list ka size: ', list.length);
+            console.log('List Array ', list);
+
+        }).catch((err) => {
+            console.log("GET request error");
+        })
+    }
 
 
 
@@ -67,6 +112,7 @@ export default function HomePage() {
                             </tr>
                         </thead>
                         <tbody>
+                            {fetchlist()}
                         </tbody>
                     </table>
                 </div>

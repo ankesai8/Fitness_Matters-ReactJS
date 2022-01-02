@@ -10,8 +10,8 @@ export default function About() {
 
 
                 <div className="in-center">
-                    <div className="card-body">
-                        <strong className="d-inline-block mb-2 text-success"><h5>Creator</h5></strong>
+                    <div className="card-body container">
+                        <strong className="d-inline-block mb-2 text-success"><h5>Developer</h5></strong>
                         <br />
                         <h1><u>Avikal Goel</u></h1>
                     </div>

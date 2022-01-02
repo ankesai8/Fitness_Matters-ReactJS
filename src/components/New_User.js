@@ -18,9 +18,9 @@ export default function New_User() {
 
             console.log("Please enter all the fields.");
 
-            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            <div className="alert alert-danger alert-dismissible fade show" role="alert">
                 <strong>ERROR </strong> Please enter all the fields.
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                <button type="button" className="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
         }
 
@@ -44,9 +44,9 @@ export default function New_User() {
 
                     console.log("SUCCESS IN ADDING USER!!");
 
-                    <div class="alert alert-success alert-dismissible fade show" role="alert">
+                    <div className="alert alert-success alert-dismissible fade show" role="alert">
                         <strong>SUCCESS </strong> New user is added to the database.
-                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        <button type="button" className="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                     </div>
 
                 }).catch(err => {
@@ -57,9 +57,9 @@ export default function New_User() {
             else {
                 console.log("SORRY, this username is already taken");
 
-                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                <div className="alert alert-danger alert-dismissible fade show" role="alert">
                     <strong>ERROR </strong> This username already exists.
-                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    <button type="button" className="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                 </div>
             }
 

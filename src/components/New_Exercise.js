@@ -30,9 +30,9 @@ export default function New_Exercise() {
         if (exercise.username == '' || exercise.password == '' || exercise.description == '' || exercise.duration == 0) {
             console.log("Please enter all the fields.");
 
-            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            <div className="alert alert-danger alert-dismissible fade show" role="alert">
                 <strong>ERROR </strong> Please enter all the fields.
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                <button type="button" className="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
 
             return;
@@ -59,9 +59,9 @@ export default function New_Exercise() {
             if (verify_pass == false) {
                 console.log("ERROR. Either the password entered is wrong or no such user exists.");
 
-                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                <div className="alert alert-danger alert-dismissible fade show" role="alert">
                     <strong>ERROR </strong> Either the password entered is wrong or no such user exists.
-                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    <button type="button" className="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                 </div>
 
                 return;
@@ -78,9 +78,9 @@ export default function New_Exercise() {
             axios.post('http://localhost:1000/new_exercise', to_db).then((res) => {
 
                 console.log("SUCCESS IN ADDING EXERCISE!!");
-                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                <div className="alert alert-success alert-dismissible fade show" role="alert">
                     <strong>SUCCESS </strong> New exercise added successfully.
-                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    <button type="button" className="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                 </div>
 
 
