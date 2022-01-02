@@ -5,6 +5,7 @@ import New_Exercise from './components/New_Exercise';
 import HomePage from './components/HomePage';
 import About from './components/About';
 import Footer from './components/Footer';
+import UserList from './components/UserList';
 
 
 
@@ -39,6 +40,10 @@ function App() {
 
           <Route exact path="/about">
             <About />
+          </Route>
+
+          <Route exact path="/userlist">
+            <UserList />
           </Route>
 
         </Switch>

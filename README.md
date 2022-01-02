@@ -1,3 +1,6 @@
+deployed on heroku: https://fitness-matters.herokuapp.com/
+
+
 Link to youtube tutorial : https://www.youtube.com/watch?v=7CqJlxBYj-M&ab_channel=freeCodeCamp.org
 
 

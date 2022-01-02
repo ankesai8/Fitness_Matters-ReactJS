@@ -15,7 +15,6 @@ export default function HomePage() {
 
         return list.map((elem) => {
             return (
-                // <option key={username} value={username}>{username}</option>
                 <>
                     {console.log('inside JSX', elem)}
                     <tr>
@@ -46,20 +45,10 @@ export default function HomePage() {
             console.log('Response data is here:', response.data);
             console.log('aapke data ka size: ', data.length);
 
-            // for (let i = 0; i < data.length; i++) {
-            //     obj.no = i;
-            //     obj.username = data[i].username;
-            //     obj.description = data[i].description;
-            //     obj.duration = data[i].duration;
-
-            //     temp.push(obj);
-            //     // console.log('oBJECT', obj)
-            //     console.log('temp is  ', temp)
-            // }
             let i = 1;
             data.forEach(element => {
                 obj = {
-                    no: i++ ,
+                    no: i++,
                     username: element.username,
                     description: element.description,
                     duration: element.duration
