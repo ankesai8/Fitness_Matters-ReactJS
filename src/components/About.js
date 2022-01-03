@@ -7,19 +7,17 @@ export default function About() {
         <>
 
             <div className="card container " >
-
-
                 <div className="in-center">
-                    <div className="card-body container">
-                        <strong className="d-inline-block mb-2 text-success"><h5>Developer</h5></strong>
-                        <br />
-                        <h1><u>Avikal Goel</u></h1>
-                    </div>
                     <img src={image} className="card-img-top image container" />
                 </div>
 
                 <div className="jumbotron my-4 py-4">
-                    <h2 className="in-center"><u>Fitness Matters</u></h2>
+                     <div className="card-body container">
+                        <strong className="d-inline-block mb-2 text-success"><h5>Developer</h5></strong>
+                        <br />
+                        <h1><u>ANkE SAIPRASDA</u></h1>
+                    </div>
+                    <h2 className="in-center"><u>Fitness Logger</u></h2>
                     <br />
 
                     <p className="lead p-font">A full stack (MERN) exercise-tracking web application which has features to add usernames, add exercise logs (i.e the name of exercise, date, duration etc) , stores the data in mongoDB Atlas data cluser, fetches and displays all exercise logs on the home page, which can then be edited or deleted in future if required and it has a functional search bar.
