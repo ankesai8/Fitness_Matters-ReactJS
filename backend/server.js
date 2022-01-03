@@ -27,9 +27,6 @@ app.use(bodyParser.json());
 app.use(upload.array());
 app.use(express.static('public'));
 
-
-
-
 // establishing the mongoose 
 mongoose.connect(url).then(() => {
     console.log("MONGO CONNECTION OPEN!!!")
@@ -38,12 +35,8 @@ mongoose.connect(url).then(() => {
     console.log(err)
 });
 
-
-
 const user_log = require('./models/user_model'); //has schema of user, this is actually a class
 const exercise_log = require('./models/exercise_model'); //has schema of exercise log, this is actually a class
-
-
 
 // get request of users
 app.get('/all_users', (req, res) => {
@@ -98,12 +91,7 @@ app.post('/new_exercise', async (req, res) => {
         }
     })
 })
-
-
-
-
-
 // open the backend server
 app.listen(port, () => {
-    console.log(`The example app is listening at http://localhost:${port}`);
+    console.log(`Fitness App is listening at http://localhost:${port}`);
 })
